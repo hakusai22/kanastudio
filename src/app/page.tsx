@@ -70,7 +70,7 @@ export default function Home() {
               onChange={(v) => setScript(v as any)}
               size="large"
               block
-              className="bg-black/40! backdrop-blur! w-full whitespace-nowrap"
+              className="seg-geek w-full whitespace-nowrap"
             />
           </div>
           
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
         
         {/* 主内容卡片 */}
-        <div className="rounded-2xl bg-black/60 p-6 backdrop-blur-lg border border-[#1b1e2a] shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)] panel-float">
+        <div className="geek-panel p-6 panel-float">
           <Tabs
             items={
               script === "hira"

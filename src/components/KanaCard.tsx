@@ -18,7 +18,7 @@ export default function KanaCard({
     <Card
       hoverable={!isEmpty}
       className={`
-        transition-all duration-300 ease-out rounded-xl border border-[#2a2d3a] bg-[#111318] 
+        transition-all duration-300 ease-out rounded-xl border border-[#2a2d3a] bg-[#111318] geek-card
         ${isEmpty 
           ? "opacity-0 pointer-events-none" 
           : "hover:shadow-[0_8px_30px_rgb(34,212,253,0.25)] hover:-translate-y-1 hover:border-cyan-400/40"

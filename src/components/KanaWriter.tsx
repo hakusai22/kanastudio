@@ -126,7 +126,7 @@ export default function KanaWriter({ kana }: { kana: string }) {
       </div>
       <div className="flex items-center gap-4">
         <button
-          className="rounded-full bg-cyan-500 px-4 py-2 text-gray-900 font-medium shadow-lg hover:bg-cyan-400 transition-colors"
+          className="btn-geek-outline"
           onClick={() => {
             speechSynthesis.cancel();
             const utter = new SpeechSynthesisUtterance(kana);
