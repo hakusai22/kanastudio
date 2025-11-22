@@ -12,6 +12,7 @@ import {
 import KanaModal from "@/components/KanaModal";
 import { useState } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import Logo from "@/components/Logo";
 
  
 
@@ -49,11 +50,14 @@ export default function Home() {
       <Layout.Content className="mx-auto w-full max-w-6xl px-6 py-10 relative z-10">
         <div className="mb-8">
           {/* 标题 */}
-          <Typography.Title className="mt-3! mb-2!">
-            <span className="bg-linear-to-r from-fuchsia-500 via-cyan-400 to-violet-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(34,212,253,0.3)] title-shimmer">
-              KanaStudio
-            </span>
-          </Typography.Title>
+          <div className="flex items-center gap-2">
+            <Logo size={32} />
+            <Typography.Title className="mt-3! mb-2!">
+              <span className="bg-linear-to-r from-fuchsia-500 via-cyan-400 to-violet-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(34,212,253,0.3)] title-shimmer">
+                KanaStudio
+              </span>
+            </Typography.Title>
+          </div>
           
           {/* 切换按钮 */}
           <div className="mt-3">

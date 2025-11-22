@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "antd/dist/reset.css";
 import "./globals.css";
 import { ConfigProvider, theme } from "antd";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-  title: "KanaStudio",
-  description: "轻量、直观、好看的假名学习网页",
+  title: "KanaStudio · 日语五十音学习",
+  description: "基于 Next.js 的现代假名学习应用，支持 AI 例句生成与朗读",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
         <AnimatedBackground />
         <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
