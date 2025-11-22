@@ -34,6 +34,14 @@ KanaStudio 是一个基于 Next.js 构建的现代网页应用，旨在帮助用
   - `/api/deepseek` 返回结构：`word`、`wordReading`、`wordRomaji`、`pos`、`definition`、`sentence`、`reading`、`translation`
   - 生成成功后在弹窗中自动朗读例句
 
+## 语音播放技术
+
+- 使用浏览器内置 `Web Speech API` 的 `SpeechSynthesis` 实现本地 TTS，无需联网
+- 通过 `SpeechSynthesisUtterance` 设置语言为 `ja-JP`，调用 `speechSynthesis.speak(utter)` 播放
+- 发音资源来自操作系统/浏览器内置的日语语音包，质量取决于本机环境
+- 可选参数：`rate`（语速）、`pitch`（音高）、`volume`（音量）；可通过 `speechSynthesis.getVoices()` 指定具体日语 `voice`
+- 点击假名立即朗读：`src/app/page.tsx`；弹窗内可再次朗读：`src/components/KanaModal.tsx`
+
 ## 功能列表
 
 - 五十音网格（平假名/片假名）
